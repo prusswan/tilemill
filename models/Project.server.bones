@@ -198,7 +198,7 @@ function loadProject(model, callback) {
         var projectName = path.join(modelPath, 'project.mml');
         if (err) return callback(new Error.HTTP('Project does not exist: "' + projectName + '"', 404));
         try {
-            object = _(object).extend(yaml.safeLoad(file.data));
+            object = _(object).extend(yaml.load(file.data)); // was yaml.safeLoad
         } catch(err) {
             var err_message = 'Could not open project.mml file for "' + model.id + '". Error was: \n\n"' + err.message + '"\n\n(in ' + projectName + ')';
             return callback(new Error(err_message));
