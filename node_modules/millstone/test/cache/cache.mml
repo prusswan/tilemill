@@ -1,0 +1,75 @@
+{
+    "Stylesheet": [
+        {
+            "id": "cache-inline.mss",
+            "data": "Map { background-color:#fff }"
+        },
+        "cache-local.mss",
+        "http://mapbox.github.com/millstone/test/cache-url.mss"
+    ],
+    "Layer": [
+        {
+            "name": "local-json",
+            "Datasource": {
+                "file": "layers/local.json"
+            }
+        },
+        {
+            "name": "local-shp",
+            "Datasource": {
+                "file": "layers/local/local.shp"
+            }
+        },
+        {
+            "name": "absolute-json",
+            "Datasource": {}
+        },
+        {
+            "name": "absolute-shp",
+            "Datasource": {}
+        },
+        {
+            "name": "polygons",
+            "Datasource": {
+                "file": "http://mapbox.github.com/millstone/test/polygons.json"
+            }
+        },
+        {
+            "name": "stations",
+            "Datasource": {
+                "file": "http://mapbox.github.com/millstone/test/stations.zip"
+            }
+        },
+        {
+            "name": "csv",
+            "Datasource": {
+                "file": "https://docs.google.com/spreadsheets/u/1/d/17G8cVaC76DE5tIY8Uvj9P-An4enlnib8oXxvM-qbfDo/export?format=csv&id=17G8cVaC76DE5tIY8Uvj9P-An4enlnib8oXxvM-qbfDo&gid=1375855324"
+            }
+        },
+        {
+            "name": "sqlite",
+            "Datasource": {
+                "file": "layers/countries.sqlite",
+                "type": "sqlite",
+                "table": "countries"
+            },
+            "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
+        },
+        {
+            "name": "sqlite-attach",
+            "Datasource": {
+                "file": "layers/countries.sqlite",
+                "type": "sqlite",
+                "table": "countries",
+                "attachdb": "data@layers/data.sqlite"
+            },
+            "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
+        },
+        {
+            "name": "zip-no-ext",
+            "Datasource": {
+                "file": "http://fakeurl.com/zip_no_ext"
+            }
+        }
+    ]
+}

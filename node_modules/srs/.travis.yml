@@ -1,0 +1,26 @@
+language: node_js
+
+os:
+  - linux
+  - osx
+
+node_js:
+ - "0.10"
+ - "4"
+ - "5"
+ - "6"
+
+addons:
+  apt:
+    sources:
+     - ubuntu-toolchain-r-test
+    packages:
+     - libstdc++6 # upgrade libstdc++ on linux to support C++11
+
+sudo: false
+
+install:
+ - npm install --fallback-to-build=false
+
+script:
+ - npm test
