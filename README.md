@@ -1,3 +1,9 @@
+# node12 
+
+Tested with node 12.22.12 on Windows 10
+Requires forked node-mapnik
+
+
 # Latest Status - June 13, 2021
 
 We are looking for people to get involved!  Take a look at some of the current Feature Request Issues, and let us know if you can help.
